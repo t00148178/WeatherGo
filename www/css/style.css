@@ -1,0 +1,46 @@
+#map {height: 400px; width: 100%;}
+div.navbar-collapse.collapse {
+    display: block;
+    overflow: hidden;
+    max-height: 0px;
+    -webkit-transition: max-height .3s ease;
+    -moz-transition: max-height .3s ease;
+    -o-transition: max-height .3s ease;
+    transition: max-height .3s ease;
+}
+div.navbar-collapse.collapse.in {
+    max-height: 2000px;
+}
+
+@media (max-width: 767px) {
+
+    .left_right_collapse {
+        position: fixed;
+        z-index: 1050;
+        top: 0;
+        bottom: 0;
+        overflow-y: auto;
+        border-radius: 0;
+        left: -250px;
+        width: 250px;
+        background-color: #F0F0F0;
+        max-height: 100%!important;
+        transition: 0.5s!important;
+        visibility: hidden;
+    }
+
+    .left_right_collapse.active{
+        visibility: visible;
+        width: 250px;
+        left: 0;
+        transition: 0.5s;
+    }
+
+
+    .left_right_collapse li a {
+        border-bottom: 1px solid #E1E1E1;
+    }
+
+}
+
+
